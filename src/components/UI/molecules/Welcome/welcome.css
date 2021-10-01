@@ -1,0 +1,33 @@
+.header-img {
+    grid-area: 2/1/11/11;
+    padding-bottom: 10px;
+    width: 100%;
+    z-index: -1;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.header-person-img {
+    grid-area: 1/1/1/6;
+    display: block;
+    position: absolute;
+    width: 17%;
+    top: 154px;
+    z-index: 1;
+}
+
+.welcome-images {
+    height: 170px;
+    display: grid;
+    grid-template-columns:2% 10% 10% 10% 10% 10% 10% 10% 10% 18%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+#welcome-web {
+    margin-bottom: 15px;
+}
+
+#welcome-mobile {
+    display: none !important;
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: local('Nunito-SemiBold'), url(../../../../assets/fonts/Nunito-SemiBold.ttf);
+}
+
+h4{
+    font-family: 'Nunito-SemiBold';
+    color: #103460;
+}

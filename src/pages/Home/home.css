@@ -1,0 +1,18 @@
+.fix-icon {
+  padding-left: 3px;
+  padding-bottom: 15px;
+}
+
+#mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 430px) {
+  #mobile {
+    display: block !important;
+  }
+
+  #web {
+    display: none !important;
+  }
+}

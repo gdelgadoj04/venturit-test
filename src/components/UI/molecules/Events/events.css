@@ -1,0 +1,38 @@
+.carousel-inner{
+    border-radius:15px;
+}
+.events-header{
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+.events-today{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10%;
+}
+
+.p-events-today{
+    padding-right: 5px;
+    position: relative;
+}
+.p-events-today::after{
+    content: "";
+  display: block;
+  width: 55%;
+  height: 1px;
+  background: #c5c5c56c;
+  right: 0;
+  top: 40%;
+  position: absolute;
+}
+.eventtoday{
+    width: 20%;
+}
+
+.one{
+    padding-top: 5%;
+}
+.two{
+    padding-top: 20%;
+}

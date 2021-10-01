@@ -1,0 +1,29 @@
+.platform-fix {
+    width: 170px;
+    margin: 15px 0px 15px 0px;
+    left: 0;
+}
+
+.fix-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button{
+    width: 25px;
+}
+
+.profile-img{
+    float: right;
+    width: 70px;
+    margin-left: 10px;
+    margin-right: -20px;
+}
+
+.profile-name{
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
