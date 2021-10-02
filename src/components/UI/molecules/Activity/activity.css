@@ -1,0 +1,39 @@
+.follower{
+    color:#1884FF;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.activity-header{
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.activity-header-m{
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.icon-accordion-m{
+    width: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.icon-accordion{
+    width: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.img-accordion{
+    height: 3.5%;
+    width: 3.5%;
+    margin-right: 15px;
+}
+
+.img-accordion-m{
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}

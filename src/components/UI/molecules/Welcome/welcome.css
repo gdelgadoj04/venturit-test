@@ -1,27 +1,75 @@
-.header-img {
-    grid-area: 2/1/11/11;
-    padding-bottom: 10px;
-    width: 100%;
-    z-index: -1;
-    margin: auto;
-    display: block;
-    object-fit: cover;
+.header-person-img {
+    bottom: 0;
+    position: absolute;
 }
 
-.header-person-img {
-    grid-area: 1/1/1/6;
-    display: block;
-    position: absolute;
-    width: 17%;
-    top: 154px;
-    z-index: 1;
+.person {
+    position: relative;
+    width: 240px;
+}
+
+.person-m{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.currently {
+    color: #D4D3DF;
+}
+
+.p-english {
+    color: #192452;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .welcome-images {
-    height: 170px;
-    display: grid;
-    grid-template-columns:2% 10% 10% 10% 10% 10% 10% 10% 10% 18%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    background: url('../../../../assets/svg/header.svg') no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    height: 144px;
+}
+
+.welcome-images-m {
+    background: url('../../../../assets/svg/header.svg') no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: flex-end;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.flag {
+    width: 20px;
+    height: 20px;
+}
+
+.english {
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px #d5d5db;
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    justify-content: center;
+    width: 161px;
+}
+
+.bot-english {
+    align-items: center;
+    display: flex;
 }
 
 #welcome-web {
@@ -30,4 +78,30 @@
 
 #welcome-mobile {
     display: none !important;
+}
+
+.img-text {
+    color: white;
+    font-size: 2rem;
+}
+
+.img-text-m {
+    color: white;
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+.img-text-span-m {
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.img-text-span {
+    color: white;
+    font-size: 1.5rem;
 }

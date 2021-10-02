@@ -6,7 +6,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -15,21 +14,22 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { IconHome, IconGrid, IconStatistic, IconChat, IconReport } from '../../../../assets/img';
-import { Icon } from '@material-ui/core';
+import { IconHome, IconGrid, IconStatistic, IconChat, IconReport, profile, platform } from '../../../../assets/img';
+import { Grid } from '@material-ui/core';
 const drawerWidth = 150;
 
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        position: 'absolute',
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
-        backgroundColor:"white",
-        color:"black"
+        backgroundColor: "white",
+        color: "black"
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -50,9 +50,11 @@ const useStyles = makeStyles((theme) => ({
         flexShrink: 0,
     },
     drawerPaper: {
+        backgroundColor: '#3D84FF',
         width: drawerWidth,
     },
     drawerHeader: {
+        backgroundColor: '#3D84FF',
         display: 'flex',
         alignItems: 'center',
         padding: theme.spacing(0, 1),
@@ -76,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
         }),
         marginLeft: 0,
     },
+    listText:{
+        color: 'white'
+    }
 }));
 const icons = [IconHome, IconGrid, IconReport, IconStatistic, IconChat];
 export default function HeaderMobileComponent() {
@@ -101,18 +106,25 @@ export default function HeaderMobileComponent() {
                 })}
             >
                 <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        className={clsx(classes.menuButton, open && classes.hide)}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Persistent drawer
-                    </Typography>
+                    <Grid container>
+                        <Grid item className={classes.item} xs={4}>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={handleDrawerOpen}
+                                edge="start"
+                                className={clsx(classes.menuButton, open && classes.hide)}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                        </Grid>
+                        <Grid item className={classes.itemSearch} xs={4}>
+                            <img className="platform-fix" alt="platform" src={platform}></img>
+                        </Grid>
+                        <Grid item className={classes.itemProfile} xs={4}>
+                            <img className="profile-img" alt="profile" src={profile} />
+                        </Grid>
+                    </Grid>
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -140,13 +152,12 @@ export default function HeaderMobileComponent() {
                             className={clsx(classes.menuButton, {
                             })}
                         >
-                            <MenuIcon style={{ color: "white" }} />
                         </IconButton>
                     </ListItem>
                     {['Home', 'Grid', 'Reports', 'Statistic', 'Chat'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{<Icon > <img className="fix-icon" alt="icon" src={icons[index]} /></Icon>}</ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemIcon>{<IconButton variant="default"> <img className="fix-icon" alt="icon" src={icons[index]} /></IconButton>}</ListItemIcon>
+                            <ListItemText className={classes.listText} primary={text} />
                         </ListItem>
                     ))}
                 </List>

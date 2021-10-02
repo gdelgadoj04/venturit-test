@@ -1,13 +1,13 @@
 .fix-icon {
-  padding-left: 3px;
-  padding-bottom: 15px;
+  position: absolute;
+  padding-bottom: 5px;
 }
 
 #mobile {
   display: none !important;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 769px) {
   #mobile {
     display: block !important;
   }

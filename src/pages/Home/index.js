@@ -13,13 +13,14 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HeaderComponent from "../../components/UI/organisms/Header"
-import { Icon } from '@material-ui/core';
 import { IconHome, IconGrid, IconStatistic, IconChat, IconReport } from '../../assets/img';
 import "./home.css"
 import Events from '../../components/UI/molecules/Events';
 import Welcome from '../../components/UI/molecules/Welcome';
 import HeaderMobileComponent from '../../components/UI/organisms/HeaderMobile';
 import Activity from '../../components/UI/molecules/Activity';
+import Progress from '../../components/UI/molecules/Progress';
+import useWindowSize from '../../hooks/windowsSizeHook';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         fontFamily: 'Nunito-SemiBold'
+    },
+    listText: {
+        fontFamily: 'Nunito-SemiBold',
+        color: 'white'
     },
     menuButton: {
         marginRight: 36,
@@ -75,6 +80,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         padding: theme.spacing(11),
     },
+    contentMobile:{
+        flexGrow: 1,
+        padding: theme.spacing(5),
+    }
 }));
 
 const drawerWidth = 200;
@@ -83,7 +92,7 @@ const HomePage = () => {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-
+    const [width] = useWindowSize();
     const handleDrawerOpen = () => {
         setOpen(!open);
     };
@@ -91,61 +100,70 @@ const HomePage = () => {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+
+
+
     return (
-        <div className={classes.root}>
+        <div  className={classes.root}>
             <CssBaseline />
-            <div id="web">
-                <HeaderComponent />
-                <Drawer
-                    variant="permanent"
-                    className={clsx(classes.drawer, {
-                        [classes.drawerOpen]: open,
-                        [classes.drawerClose]: !open,
-                    })}
-                    classes={{
-                        paper: clsx({
+            {width > 770 ?
+                <div>
+                    <HeaderComponent />
+                    <Drawer
+                        variant="permanent"
+                        className={clsx(classes.drawer, {
                             [classes.drawerOpen]: open,
                             [classes.drawerClose]: !open,
-                        }),
-                    }}
-                >
-                    <div className={classes.toolbar}>
-                        <IconButton onClick={handleDrawerClose}>
-                            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                        </IconButton>
-                    </div>
-                    <Divider />
-                    <List>
-                        <ListItem>
-                            <IconButton
-                                color="white"
-                                aria-label="open drawer"
-                                onClick={handleDrawerOpen}
-                                edge="start"
-                                className={clsx(classes.menuButton, {
-                                })}
-                            >
-                                <MenuIcon style={{ color: "white" }} />
+                        })}
+                        classes={{
+                            paper: clsx({
+                                [classes.drawerOpen]: open,
+                                [classes.drawerClose]: !open,
+                            }),
+                        }}
+                    >
+                        <div className={classes.toolbar}>
+                            <IconButton color="default" onClick={handleDrawerClose}>
+                                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                             </IconButton>
-                        </ListItem>
-                        {['Home', 'Grid', 'Reports', 'Statistic', 'Chat'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{<Icon > <img className="fix-icon" alt="icon" src={icons[index]} /></Icon>}</ListItemIcon>
-                                <ListItemText primary={text} />
+                        </div>
+                        <Divider />
+                        <List>
+                            <ListItem>
+                                <IconButton
+                                    color="default"
+                                    aria-label="open drawer"
+                                    onClick={handleDrawerOpen}
+                                    edge="start"
+                                    className={clsx(classes.menuButton, {
+                                    })}
+                                >
+                                    <MenuIcon style={{ color: "white" }} />
+                                </IconButton>
                             </ListItem>
-                        ))}
-                    </List>
-                </Drawer>
-            </div>
-            <div id="mobile">
-                <HeaderMobileComponent></HeaderMobileComponent>
-            </div>
-            <main className={classes.content}>
-                <div className={classes.toolbar} />
-                <Welcome />               
-                <Events />
-                <Activity/>
-            </main>
+                            {['Home', 'Grid', 'Reports', 'Statistic', 'Chat'].map((text, index) => (
+                                <ListItem button key={text}>
+                                    <ListItemIcon>{<IconButton variant="default"> <img className="fix-icon" alt="icon" src={icons[index]} /></IconButton>}</ListItemIcon>
+                                    <ListItemText className={classes.listText} primary={text} />
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Drawer>
+                </div>
+                : <HeaderMobileComponent />}
+            {width > 770 ?
+                <main className={classes.content}>
+                    <Welcome />
+                    <Events />
+                    <Activity />
+                    <Progress />
+                </main> :
+                <main style={{width: width}} className={classes.contentMobile}>
+                    <Welcome />
+                    <Events />
+                    <Activity />
+                    <Progress />
+                </main>}
         </div>
     );
 }

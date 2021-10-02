@@ -1,38 +1,123 @@
-.carousel-inner{
-    border-radius:15px;
+.carousel-inner {
+    border-radius: 15px;
 }
-.events-header{
+
+.carousel-m {
+    height: 250px;
+}
+
+.events-header {
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
-.events-today{
+
+.events-header-m {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.events-today {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 10%;
 }
+.events-today-m {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-.p-events-today{
+.p-events-today {
     padding-right: 5px;
     position: relative;
 }
-.p-events-today::after{
+
+.p-events-today::after {
     content: "";
-  display: block;
-  width: 55%;
-  height: 1px;
-  background: #c5c5c56c;
-  right: 0;
-  top: 40%;
-  position: absolute;
-}
-.eventtoday{
-    width: 20%;
+    display: block;
+    width: 55%;
+    height: 1px;
+    background: #a3a3a377;
+    right: 0;
+    top: 40%;
+    position: absolute;
 }
 
-.one{
+.p-events-today-m {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.p-events-today-m::after {
+    content: "";
+    display: block;
+    width: 65%;
+    height: 1px;
+    background: #a3a3a377;
+    right: 0;
+    top: 40%;
+    position: absolute;
+}
+
+.eventtoday {
+    width: 20%;
+}
+.eventtoday-m{
+    width: 65px;
+}
+.one {
     padding-top: 5%;
 }
-.two{
+
+.one-m{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.two {
     padding-top: 20%;
+}
+
+.two-m{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-item-m {
+    height: 250px;
+}
+
+.carousel-img-m {
+    height: 100%;
+    object-fit: cover;
+}
+
+.type{
+    background-color: #3D84FF;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 2px 5px 2px 5px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+}
+
+.hour{
+    color: #9D9BB6;
+    font-weight: bold;
+}
+
+.text-event{
+    color: #192452;
+    font-weight: bold;
+    font-size: 20px;
 }
