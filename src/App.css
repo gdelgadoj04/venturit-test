@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+body {
+  background-color: #F5F5FB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Gilroy-Extrabold';
+  src: local('Gilroy-Extrabold'), url(./assets/fonts/Gilroy-ExtraBold.otf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: local('Gilroy-Light'), url(./assets/fonts/Gilroy-Light.otf);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: local('Gotham-Bold'), url(./assets/fonts/Gotham\ Bold.otf);
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: 'Gotham-Book';
+  src: local('Gotham-Book'), url(./assets/fonts/Gotham\ Book.otf);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Gotham-Light';
+  src: local('Gotham-Light'), url(./assets/fonts/Gotham\ Light.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: local('Gotham-Medium'), url(./assets/fonts/Gotham\ Medium.otf);
+}
+
+@font-face {
+  font-family: 'Nunito-SemiBold';
+  src: local('Nunito-SemiBold'), url(./assets/fonts/Nunito-SemiBold.ttf);
+}
+
+h4{
+  font-family: Gotham-Medium !important; 
+  color: #103460;
+}
+
+h6{
+  font-family: Gotham-Book !important;
+  font-size: 1rem !important;
 }

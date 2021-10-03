@@ -17,3 +17,4 @@ export const followers = 'https://i.ibb.co/xzsdgKf/ic-followers-3x.png';
 export const assignments = 'https://i.ibb.co/c1cjKYM/ic-assignments-3x.png';
 export const events = 'https://i.ibb.co/1ZVKHqm/ic-events-3x.png';
 export const flag = 'https://i.ibb.co/zGQd0Jk/Screen-Shot-2020-09-24-at-3-34-23-PM-3x.png';
+export const footer = 'https://i.ibb.co/3MPv6Xr/Oval-Oval-Oval-Mask-3x.png';

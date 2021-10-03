@@ -1,13 +1,21 @@
 .platform-fix {
-    width: 170px;
-    margin: 15px 0px 15px 0px;
     left: 0;
+    margin: 15px 0px 15px 0px;
+    width: 170px;
+}
+
+.plat-m{
+    display: flex;
+    margin: auto;
+    padding-top:15px;
+    position:fixed;
+    right: 0;
 }
 
 .fix-search {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .icon-button{

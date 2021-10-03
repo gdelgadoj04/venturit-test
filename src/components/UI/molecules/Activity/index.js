@@ -33,7 +33,7 @@ const Activity = () => {
                         id="panel1a-header"
                     >
                         <img className="img-accordion" src={followers} alt="followers" />
-                        <Typography className={classes.heading}>You have new 5 followers including <span className="follower"> Kathryn Crawford</span> and <span className="follower">Piper Shaw</span></Typography>
+                        <Typography variant="h6" className={classes.heading}>You have new 5 followers including <span className="follower"> Kathryn Crawford</span> and <span className="follower">Piper Shaw</span></Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
@@ -49,7 +49,7 @@ const Activity = () => {
                         id="panel2a-header"
                     >
                         <img className="img-accordion" src={events} alt="followers" />
-                        <Typography className={classes.heading}>3 new events were added to your calendar</Typography>
+                        <Typography variant="h6" className={classes.heading}>3 new events were added to your calendar</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
@@ -65,7 +65,7 @@ const Activity = () => {
                         id="panel3a-header"
                     >
                         <img className="img-accordion" src={assignments} alt="followers" />
-                        <Typography className={classes.heading}>You have 3 pending reading to complete</Typography>
+                        <Typography variant="h6" className={classes.heading}>You have 3 pending reading to complete 🤓 </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>

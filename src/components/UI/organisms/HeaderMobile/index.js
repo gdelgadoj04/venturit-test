@@ -16,7 +16,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { IconHome, IconGrid, IconStatistic, IconChat, IconReport, profile, platform } from '../../../../assets/img';
 import { Grid } from '@material-ui/core';
-const drawerWidth = 150;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
         }),
     },
     menuButton: {
-        marginRight: theme.spacing(2),
+        marginTop: theme.spacing(1),
+        color:'#A3A1BA',
     },
     hide: {
         display: 'none',
@@ -107,7 +108,7 @@ export default function HeaderMobileComponent() {
             >
                 <Toolbar>
                     <Grid container>
-                        <Grid item className={classes.item} xs={4}>
+                        <Grid item className={classes.item} xs={2}>
                             <IconButton
                                 color="inherit"
                                 aria-label="open drawer"
@@ -118,10 +119,10 @@ export default function HeaderMobileComponent() {
                                 <MenuIcon />
                             </IconButton>
                         </Grid>
-                        <Grid item className={classes.itemSearch} xs={4}>
-                            <img className="platform-fix" alt="platform" src={platform}></img>
+                        <Grid item className={classes.itemSearch} xs={8}>
+                            <img className="platform-fix plat-m" alt="platform" src={platform}></img>
                         </Grid>
-                        <Grid item className={classes.itemProfile} xs={4}>
+                        <Grid item className={classes.itemProfile} xs={2}>
                             <img className="profile-img" alt="profile" src={profile} />
                         </Grid>
                     </Grid>

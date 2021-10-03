@@ -16,13 +16,16 @@
 }
 
 .currently {
-    color: #D4D3DF;
+    font-size:12px;
+    font-weight: 600;
+    color: #9F9DB8;
 }
 
 .p-english {
     color: #192452;
     font-weight: bold;
     font-size: 25px;
+    padding-left: 5px;
 }
 
 .welcome-images {
@@ -67,6 +70,12 @@
     width: 161px;
 }
 
+.welcome-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .bot-english {
     align-items: center;
     display: flex;
@@ -81,10 +90,9 @@
 }
 
 .img-text {
+    font-family: Gotham-Medium; 
     color: white;
-    font-size: 2rem;
-}
-
+    font-size: 1.9rem;}
 .img-text-m {
     color: white;
     font-size: 2rem;
@@ -102,6 +110,7 @@
 }
 
 .img-text-span {
+    font-family: Gotham-Light; 
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }

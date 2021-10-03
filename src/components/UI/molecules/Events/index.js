@@ -33,8 +33,8 @@ const Events = () => {
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
-                                    <h2>Youth Talent & Education</h2>
-                                    <h2>May 20</h2>
+                                    <span className="carousel-text-left">Youth Talent & Education</span>
+                                    <span className="carousel-text-right">May 20</span>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
@@ -68,8 +68,20 @@ const Events = () => {
                     <Grid item xs={4} className={classes.eventsToday}>
                         <p className="p-events-today">EVENTS TODAY</p>
                         <div className="events-today">
-                            <img className="eventtoday one" alt="eventone" src={evenstOne} />
-                            <img className="eventtoday two" alt="eventtwo" src={eventsTwo} />
+                            <div className="one">
+                                <img className="eventtoday" alt="eventone" src={evenstOne} />
+                                <div className="event-info">
+                                    <span className="hour">10:30AM</span>
+                                    <span className="text-event">Webinar: the basics of...</span>
+                                </div>
+                            </div>
+                            <div className="two">
+                                <img className="eventtoday" alt="eventtwo" src={eventsTwo} />
+                                <div className="event-info">
+                                    <span className="hour">2:15PM</span>
+                                    <span className="text-event">Team Building Activity</span>
+                                </div>
+                            </div>
                         </div>
                     </Grid>
                 </Grid>
@@ -92,8 +104,8 @@ const Events = () => {
                                     alt="First slide"
                                 />
                                 <Carousel.Caption>
-                                    <h2>Youth Talent & Education</h2>
-                                    <h2>May 20</h2>
+                                    <span className="carousel-text-left">Youth Talent & Education</span>
+                                    <span className="carousel-text-right">May 20</span>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item className="carousel-item-m">
@@ -128,12 +140,12 @@ const Events = () => {
                         <p className="p-events-today-m">EVENTS TODAY</p>
                         <div className="events-today-m">
                             <div className="one-m">
-                                <img className="eventtoday-m" alt="eventone" src={evenstOne} />
+                                <img className="eventtoday" alt="eventone" src={evenstOne} />
                                 <span className="hour">10:30AM</span>
                                 <span className="text-event">Webinar: the basics of...</span>
                             </div>
                             <div className="two-m">
-                                <img className="eventtoday-m" alt="eventtwo" src={eventsTwo} />
+                                <img className="eventtoday" alt="eventtwo" src={eventsTwo} />
                                 <span className="hour">2:15PM</span>
                                 <span className="text-event">Team Building Activity</span>
                             </div>

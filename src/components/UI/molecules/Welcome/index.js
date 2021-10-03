@@ -41,9 +41,9 @@ const Welcome = () => {
                         <div className="person">
                             <img className="header-person-img" alt="person" src={person} />
                         </div>
-                        <div>
+                        <div className="welcome-text">
                             <p className="img-text">Welcome back, Clarence</p>
-                            <span className="img-text-span">Ta da! You're up to date</span>
+                            <span className="img-text-span">Ta da! You're up to date 🥳</span>
                         </div>
                     </div>
                 </>

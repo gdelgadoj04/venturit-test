@@ -29,8 +29,13 @@
 }
 
 .p-events-today {
+    font-family:Gilroy-Extrabold ;
+    letter-spacing: 2px;
+    color: #304F76;
+    text-transform: uppercase;
     padding-right: 5px;
     position: relative;
+    font-size: 1rem;
 }
 
 .p-events-today::after {
@@ -61,14 +66,21 @@
     position: absolute;
 }
 
-.eventtoday {
-    width: 20%;
-}
-.eventtoday-m{
+.eventtoday{
     width: 65px;
 }
+
+.event-info{
+    font-family:Gilroy-Light;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-weight: bold;
+}
 .one {
+    display: flex;
     padding-top: 5%;
+    align-items: center;
 }
 
 .one-m{
@@ -78,7 +90,9 @@
 }
 
 .two {
+    display: flex;
     padding-top: 20%;
+    align-items: center;
 }
 
 .two-m{
@@ -100,13 +114,16 @@
     background-color: #3D84FF;
     border-radius: 10px;
     color: white;
+    font-family:Gilroy-Light;
     font-size: 10px;
+    letter-spacing: 2px;
     margin-right: 20px;
     margin-top: 20px;
-    padding: 2px 5px 2px 5px;
+    padding:5px 0px 2px 0px;
     position: absolute;
     right: 0;
     text-align: center;
+    text-transform: uppercase;
     top: 0;
     width: 70px;
 }
@@ -119,5 +136,13 @@
 .text-event{
     color: #192452;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.carousel-text-left{
+    font-size: 30px;
+}
+
+.carousel-text-right{
+
 }

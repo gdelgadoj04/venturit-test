@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import "./progress.css";
 import useWindowSize from '../../../../hooks/windowsSizeHook';
 
@@ -20,6 +20,11 @@ const useStyles = makeStyles({
     },
     progress: {
         paddingTop: "4%"
+    },
+    miniCards: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
     }
 });
 
@@ -29,80 +34,75 @@ const Progress = () => {
     return (
         <>{width > 770 ?
             <Grid container className={classes.progress}>
-                <Grid item xs={4}>
+                <Grid item xs={5}>
                     <div className="progress-overview">
-
+                        <span className="progress-text">Progress overview</span>
+                        <div className="progress-percent">
+                            <svg className="progress-circle">
+                                <circle cx="80" cy="80" r="80"></circle>
+                                <circle cx="80" cy="80" r="80"></circle>
+                            </svg>
+                            <span className="percent-text">40<span className="percent-symbol">%</span></span>
+                        </div>
+                        <div className="completed-box">
+                            <div className="completed-content">
+                                <span className="completed">Completed</span>
+                                <span className="hours">20 <span className="left">hours</span></span>
+                            </div>
+                            <div className="left-content">
+                                <span className="left-to-go">Left to go</span>
+                                <span className="hours">30 <span className="left">hours</span></span>
+                            </div>
+                        </div>
                     </div>
                 </Grid>
-                <Grid item xs={8}>
-                    <div>
-                        <Typography variant="h4">
-                            Progress
-                        </Typography>
-                        <Card className={classes.root} variant="outlined">
-                            <CardContent>
-                                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Word of the Day
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    asfsd
-                                </Typography>
-                                <Typography className={classes.pos} color="textSecondary">
-                                    adjective
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    well meaning and kindly.
-                                    <br />
-                                    {'"a benevolent smile"'}
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                        <Card className={classes.root} variant="outlined">
-                            <CardContent>
-                                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Word of the Day
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    asfasd
-                                </Typography>
-                                <Typography className={classes.pos} color="textSecondary">
-                                    adjective
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    well meaning and kindly.
-                                    <br />
-                                    {'"a benevolent smile"'}
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                        <Card className={classes.root} variant="outlined">
-                            <CardContent>
-                                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Word of the Day
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    asfs
-                                </Typography>
-                                <Typography className={classes.pos} color="textSecondary">
-                                    adjective
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    well meaning and kindly.
-                                    <br />
-                                    {'"a benevolent smile"'}
-                                </Typography>
-                            </CardContent>
-                        </Card>
+                <Grid className={classes.miniCards} item xs={7}>
+                    <Typography variant="h4">
+                        Progress
+                    </Typography>
+                    <div className="row-progress">
+                        <div className="mini-card">
+                            <span className="total">Total Webinars</span>
+                            <span className="number-hour">9</span>
+                        </div>
+                        <div className="mini-card">
+                            <span className="total">Pending Assigments</span>
+                            <span className="number-hour">0</span>
+                        </div>
+                        <div className="mini-card">
+                            <span className="total">Total units</span>
+                            <span className="number-hour">5</span>
+                        </div>
+                    </div>
+                    <div className="row-progress">
+                        <div className="mini-card">
+                            <span className="total">Total reading</span>
+                            <span className="number-hour">14</span>
+                        </div>
+                        <div className="mini-card active-card">
+                            <span className="total active-text">Total videos</span>
+                            <span className="number-hour">5</span>
+                        </div>
+                    </div>
+                    <div className="footer">
+                        <span className="footer-text">Confirm your account details
+                            <span className="footer-confirm">Please confirm your email and phone number.
+                            </span>
+                        </span>
                     </div>
                 </Grid>
             </Grid>
             : <>
                 <div className="progress-overview-m">
-                    <span className="progress-text">Progress overview</span>
+                    <span className="progress-text m-text">Progress overview</span>
                     <div className="progress-percent">
-                        <span className="percent-text">40%</span>
+                        <svg className="progress-circle-m">
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <span className="percent-text">40<span className="percent-symbol">%</span></span>
                     </div>
-                    <div className="completed-box">
+                    <div className="completed-box-m">
                         <div className="completed-content">
                             <span className="completed">Completed</span>
                             <span className="hours">20 <span className="left">hours</span></span>
@@ -118,30 +118,35 @@ const Progress = () => {
                     <Typography variant="h4">
                         Progress
                     </Typography>
-                    <div className="row-progress">
-                        <div className="mini-card">
-                            <span className="total">Total Webinars</span>
-                            <span className="p-english">9</span>
+                    <div className="column-progress">
+                        <div className="row-progress">
+                            <div className="mini-card-m">
+                                <span className="total">Total Webinars</span>
+                                <span className="number-hour-m">9</span>
+                            </div>
+                            <div className="mini-card-m">
+                                <span className="total">Pending Assigments</span>
+                                <span className="number-hour-m"></span>
+                            </div>
                         </div>
-                        <div className="mini-card">
-                            <span className="total">Pending Assigments</span>
-                            <span className="p-english"></span>
+                        <div className="row-progress">
+                            <div className="mini-card-m">
+                                <span className="total">Total reading</span>
+                                <span className="number-hour-m">14</span>
+                            </div>
+                            <div className="mini-card-m active-card">
+                                <span className="total active-text">Total videos</span>
+                                <span className="number-hour-m"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="row-progress">
-                        <div className="mini-card">
-                            <span className="total">Total reading</span>
-                            <span className="p-english">14</span>
+                        <div className="row-progress">
+                            <div className="mini-card-m">
+                                <span className="total">Total units</span>
+                                <span className="number-hour-m">5</span>
+                            </div>
                         </div>
-                        <div className="mini-card active-card">
-                            <span className="total active-text">Total videos</span>
-                            <span className="p-english"></span>
-                        </div>
-                    </div>
-                    <div className="row-progress">
-                        <div className="mini-card ">
-                            <span className="total">Total units</span>
-                            <span className="p-english">5</span>
+                        <div className="footer-m">
+
                         </div>
                     </div>
                 </>
