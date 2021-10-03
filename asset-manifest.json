@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/venturit-test/static/css/main.1cbac3b3.chunk.css",
-    "main.js": "/venturit-test/static/js/main.506670a4.chunk.js",
-    "main.js.map": "/venturit-test/static/js/main.506670a4.chunk.js.map",
-    "runtime-main.js": "/venturit-test/static/js/runtime-main.74829561.js",
-    "runtime-main.js.map": "/venturit-test/static/js/runtime-main.74829561.js.map",
+    "main.css": "/venturit-test/static/css/main.1be8fd8c.chunk.css",
+    "main.js": "/venturit-test/static/js/main.c52d29f1.chunk.js",
+    "main.js.map": "/venturit-test/static/js/main.c52d29f1.chunk.js.map",
+    "runtime-main.js": "/venturit-test/static/js/runtime-main.790efff0.js",
+    "runtime-main.js.map": "/venturit-test/static/js/runtime-main.790efff0.js.map",
     "static/css/2.f2512455.chunk.css": "/venturit-test/static/css/2.f2512455.chunk.css",
-    "static/js/2.636f22d9.chunk.js": "/venturit-test/static/js/2.636f22d9.chunk.js",
-    "static/js/2.636f22d9.chunk.js.map": "/venturit-test/static/js/2.636f22d9.chunk.js.map",
-    "static/js/3.1941e697.chunk.js": "/venturit-test/static/js/3.1941e697.chunk.js",
-    "static/js/3.1941e697.chunk.js.map": "/venturit-test/static/js/3.1941e697.chunk.js.map",
+    "static/js/2.d18d7cf9.chunk.js": "/venturit-test/static/js/2.d18d7cf9.chunk.js",
+    "static/js/2.d18d7cf9.chunk.js.map": "/venturit-test/static/js/2.d18d7cf9.chunk.js.map",
+    "static/js/3.8340225a.chunk.js": "/venturit-test/static/js/3.8340225a.chunk.js",
+    "static/js/3.8340225a.chunk.js.map": "/venturit-test/static/js/3.8340225a.chunk.js.map",
     "index.html": "/venturit-test/index.html",
     "static/css/2.f2512455.chunk.css.map": "/venturit-test/static/css/2.f2512455.chunk.css.map",
-    "static/css/main.1cbac3b3.chunk.css.map": "/venturit-test/static/css/main.1cbac3b3.chunk.css.map",
-    "static/js/2.636f22d9.chunk.js.LICENSE.txt": "/venturit-test/static/js/2.636f22d9.chunk.js.LICENSE.txt",
-    "static/media/Nunito-SemiBold.45ea1be7.ttf": "/venturit-test/static/media/Nunito-SemiBold.45ea1be7.ttf",
+    "static/css/main.1be8fd8c.chunk.css.map": "/venturit-test/static/css/main.1be8fd8c.chunk.css.map",
+    "static/js/2.d18d7cf9.chunk.js.LICENSE.txt": "/venturit-test/static/js/2.d18d7cf9.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/venturit-test/static/media/Nunito-SemiBold.45ea1be7.ttf",
     "static/media/welcome.css": "/venturit-test/static/media/header.71096e7f.svg",
     "static/media/person.6c73f575.svg": "/venturit-test/static/media/person.6c73f575.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.74829561.js",
+    "static/js/runtime-main.790efff0.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.636f22d9.chunk.js",
-    "static/css/main.1cbac3b3.chunk.css",
-    "static/js/main.506670a4.chunk.js"
+    "static/js/2.d18d7cf9.chunk.js",
+    "static/css/main.1be8fd8c.chunk.css",
+    "static/js/main.c52d29f1.chunk.js"
   ]
 }
