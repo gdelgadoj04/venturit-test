@@ -105,11 +105,11 @@ const Progress = () => {
                     <div className="completed-box-m">
                         <div className="completed-content">
                             <span className="completed">Completed</span>
-                            <span className="hours">20 <span className="left">hours</span></span>
+                            <span className="hours-m">20 <span className="left">hours</span></span>
                         </div>
                         <div className="left-content">
                             <span className="left-to-go">Left to go</span>
-                            <span className="hours">30 <span className="left">hours</span></span>
+                            <span className="hours-m">30 <span className="left">hours</span></span>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,10 @@ const Progress = () => {
                             </div>
                         </div>
                         <div className="footer-m">
-
+                            <span className="footer-text-m">Confirm your account details
+                                <span className="footer-confirm-m">Please confirm your email and phone number.
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </>

@@ -46,8 +46,8 @@ const Events = () => {
                                 />
 
                                 <Carousel.Caption>
-                                    <h3>Second slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <span className="carousel-text-left">Youth Talent & Education</span>
+                                    <span className="carousel-text-right">May 20</span>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
@@ -59,8 +59,8 @@ const Events = () => {
                                 />
 
                                 <Carousel.Caption>
-                                    <h3>Third slide label</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                    <span className="carousel-text-left">Youth Talent & Education</span>
+                                    <span className="carousel-text-right">May 20</span>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>

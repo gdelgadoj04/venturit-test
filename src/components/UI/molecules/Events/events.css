@@ -138,11 +138,22 @@
     font-weight: bold;
     font-size: 18px;
 }
+.carousel-caption{
+    display: flex;
+}
 
 .carousel-text-left{
+    flex: 1;
+    font-family:Gilroy-Extrabold ;
     font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 .carousel-text-right{
-
+    flex: 1;
+    font-family:Gilroy-Extrabold ;
+    font-size: 30px;
+    text-align: right;
+    text-transform: uppercase;
 }
